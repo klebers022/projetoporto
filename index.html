@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Car</title>
+
+    <!-- Ícone da aba -->
+    <link
+      rel="shortcut icon"
+      href="assets/logo-helpcar (1).png"
+      type="image/x-icon"
+    />
+
+    <!-- Estilos e fontes externas -->
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts de IA e Tensorflow -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    
+    <!-- Script JavaScript -->
+    <script src="js/script.js" defer></script>
+  </head>
+  
+  <body>
+    <!-- Cabeçalho da página -->
+    <header>
+      <img class="logo" src="assets/logo-helpcar (1).png" width="100px" alt="Logo da Help Car" />
+      <h1>HELP CAR</h1>
+      <button class="login"><a href="/paginas/cadastro.html">Login</a></button>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/paginas/servicos.html">Serviços</a></li>
+        <li><a href="/paginas/participantes.html">Participantes</a></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="main-pg1">
+      <div class="container">
+        
+        <!-- Seção principal com texto animado -->
+        <section class="section1">
+          <h2 id="typing"></h2>
+          <p>Solucione qualquer problema de seu carro com a inteligência artificial da Help Car.</p>
+        </section>
+
+        <!-- Seção com o Chatbot -->
+        <section class="section2">
+          <div class="chatbot">
+            <img src="assets/logo-helpcar (1).png" alt="logo-helpcar" />
+            <h2>HELP CAR</h2>
+            <p>Descubra seu problema com apenas um clique com a ajuda da Help Car. Tudo fica mais fácil!</p>
+            <button id="chat">Use agora</button>
+          </div>
+        </section>
+        
+      </div>
+
+      <!-- Seção com cartões de informações -->
+      <section class="section3">
+        <div class="cartoes">
+          <div class="cartao1">
+            <img class="icon" src="/assets/icon-engrenagem.png" alt="engrenagem azul" />
+            <p>Nossa plataforma conecta você às melhores oficinas mecânicas, garantindo serviço de qualidade onde quer que você esteja.</p>
+          </div>
+          <div class="cartao2">
+            <img class="icon" src="/assets/carro.png" alt="carro azul" />
+            <p>Nosso chatbot utiliza inteligência artificial para diagnósticos rápidos e eficientes, oferecendo suporte via texto, áudio e análise de imagens de problemas do veículo.</p>
+          </div>
+          <div class="cartao3">
+            <img class="icon" src="/assets/carregando.png" alt="Bateria azul" />
+            <p>Trabalhamos com estoque mínimo de peças, adquirindo-as sob demanda após a confirmação do agendamento, economizando capital e garantindo eficiência.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de reconhecimento de imagem e diagnóstico -->
+   <!-- Seção de reconhecimento de imagem e diagnóstico -->
+<section class="section4">
+  <div class="container_foto">
+      <div class="area_foto">
+          <!-- Título e explicação sobre a funcionalidade de reconhecimento -->
+          <div class="tirar_foto">
+              <h1>Tire uma foto do seu painel e descubra o que significa!</h1>
+              <p>Nosso sistema inteligente analisa as luzes acesas no seu painel e oferece um diagnóstico preciso com soluções e orçamento estimado.</p>
+              <!-- Botão para abrir a câmera -->
+              <button type="button" onclick="init()" id="enviar_foto">Abrir Câmera</button>
+          </div>
+
+          <!-- Área de visualização de vídeo e diagnóstico -->
+          <div class="resposta_foto">
+              <video id="video" autoplay style="display: none"></video>
+              <canvas id="canvas" style="display: none"></canvas>
+              <img class="imagem" id="imagem" src="" alt="Imagem do painel" />
+              <div id="webcam-container"></div>
+              <div id="label-container"></div>
+
+              <!-- Diagnóstico automático -->
+              <div class="diagnostico">
+                  <h2>Diagnóstico</h2>
+                  <p id="diagnostico">O problema detectado é:...</p>
+              </div>
+
+              <!-- Soluções sugeridas -->
+              <div class="solucoes">
+                  <h2>Soluções</h2>
+                  <p id="solucao">Sugestões para resolver o problema:...</p>
+              </div>
+
+              <!-- Orçamento estimado -->
+              <div class="orcamento">
+                  <h2>Orçamento</h2>
+                  <div id="orcamento-peças">Peças: ...</div>
+                  <div id="orcamento-mao-obra">Mão de Obra: ...</div>
+                  <div id="orcamento-total">Total: ...</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+      <div class="container-footer">
+        <div class="text-footer">
+          <h2>Contato</h2>
+          <p>Entre em contato conosco para mais informações sobre nossos serviços e parcerias.</p>
+          <p><strong>Email:</strong> contato@helpcar.com.br</p>
+          <p><strong>Telefone:</strong> (11) 9999-9999</p>
+
+          <!-- Redes sociais -->
+          <div class="social-media">
+            <a href="https://www.facebook.com/helpcar" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/helpcar" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com/helpcar" target="_blank">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

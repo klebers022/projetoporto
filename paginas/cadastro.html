@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cadastro</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/logo-helpcar.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/cadastro.css" />
+
+    <script src="../js/cadastro.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="../assets\logo-helpcar (1).png"
+        width="100px"
+        alt="Logo da Help Car"
+      />
+      <h1>HELP CAR</h1>
+      <button class="login"><a href="/paginas/cadastro.html">Login</a></button>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="/paginas/servicos.html">Serviços</a></li>
+        <li><a href="/paginas/participantes.html">Participantes</a></li>
+      </ul>
+    </nav>
+    <section class="cadastro-help-car">
+      <div class="container-cadastro">
+        <h2>Cadastro Help Car</h2>
+        <form id="cadastro-form">
+          <!-- Informações do Usuário -->
+          <fieldset>
+            <legend>Informações Pessoais</legend>
+
+            <div class="form-group">
+              <label for="nome">Nome Completo</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="Digite seu telefone"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <!-- Informações do Veículo -->
+          <fieldset>
+            <legend>Informações do Veículo</legend>
+
+            <div class="form-group">
+              <label for="marca">Marca</label>
+              <input
+                type="text"
+                id="marca"
+                name="marca"
+                placeholder="Marca do veículo"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="modelo">Modelo</label>
+              <input
+                type="text"
+                id="modelo"
+                name="modelo"
+                placeholder="Modelo do veículo"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="ano">Ano de Fabricação</label>
+              <input
+                type="number"
+                id="ano"
+                name="ano"
+                placeholder="Ano do veículo"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="placa">Placa</label>
+              <input
+                type="text"
+                id="placa"
+                name="placa"
+                placeholder="Placa do veículo"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <!-- Informações Adicionais -->
+          <fieldset>
+            <legend>Informações de Serviço</legend>
+
+            <div class="form-group">
+              <label for="descricao">Descrição do Problema</label>
+              <textarea
+                id="descricao"
+                name="descricao"
+                placeholder="Descreva o problema do veículo"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Botão de Envio -->
+          <div class="form-group">
+            <button type="submit" class="btn-submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
